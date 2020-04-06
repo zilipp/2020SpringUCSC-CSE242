@@ -31,7 +31,6 @@ for t in range(1, num_trials + 1):
         earns_money += toll
     else:
         earns_money -= toll
-        shuffle(balls)
 
 mean_winnings = earns_money / num_trials
 print('mean winnings =', mean_winnings)
