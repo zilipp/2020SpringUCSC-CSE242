@@ -6,7 +6,7 @@ seed(213)   # DON'T CHANGE
 ### YOUR CODE HERE ###
 mean_winnings = 0
 
-num_trials = 100000
+num_trials = 1000000
 # This sets the feedback interval so we know the program hasn't crashed.
 feedback = int(np.round(num_trials / 10))
 earns_money = 0
@@ -26,11 +26,11 @@ for t in range(1, num_trials + 1):
     indices = np.random.choice(100, 3, replace=False)
     chosen = [balls[indices[0]], balls[indices[1]], balls[indices[2]]]
     red_num = chosen.count(1)
-    toll = randint(1, 7)
+    toll = randint(1, 7) + randint(1, 7)
     if red_num > 1:
         earns_money += toll
     else:
         earns_money -= toll
 
 mean_winnings = earns_money / num_trials
-print('mean winnings =', mean_winnings)
+print('mean winnings =', mean_winnings - 2)
