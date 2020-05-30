@@ -61,6 +61,7 @@ def optimizer(x1, x2):
             opt_choice = opt_dict[norms[0]]
             w = opt_choice[0]
             b = opt_choice[1]
+
         w_optimum = opt_choice[0][0] + lrate * 2
 
     return w, b
